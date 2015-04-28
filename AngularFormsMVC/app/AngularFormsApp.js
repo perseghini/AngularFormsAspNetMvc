@@ -8,7 +8,7 @@ angularFormsApp.config(
                 controller: "HomeController"
             })
             .when("/newEmployeeForm", {
-                templateUrl: "app/Employ eeForm/efTemplate.html",
+                templateUrl: "app/EmployeeForm/efTemplate.html",
                 controller: "efController"
             })
              .when("/updateEmployeeForm/:id", {
@@ -24,6 +24,14 @@ angularFormsApp.config(
 angularFormsApp.controller("HomeController",
     ["$scope", "$location", "$modal", "DataService",
     function ($scope, $location, $modal, DataService) {
+        DataService.getEmployees().then(
+            function (results) {
+                var data = results.data;
+            },
+            function (results) {
+                //ERROR
+            });
+
         $scope.showCreateEmployeeForm = function () {
             $location.path("/newEmployeeForm");
             //$modal.open({

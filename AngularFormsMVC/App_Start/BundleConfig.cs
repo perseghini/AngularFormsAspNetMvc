@@ -40,7 +40,7 @@ namespace AngularFormsMVC
                       "~/app/EmployeeForm/efController.js",
                       "~/app/EmployeeForm/efDirective.js"));
 
-            BundleTable.EnableOptimizations = true;
+            BundleTable.EnableOptimizations = false;
         }
     }
 }

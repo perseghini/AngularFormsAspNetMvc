@@ -112,11 +112,16 @@
             </div>
         </fieldset>
         <br />
+        <div class="col-sm-offset-3 col-sm-9">
+            <input type="button" value="Cancel" class="btn btn-default" ng-click="cancelForm()" />
+            <input type="submit" value="Submit" class="btn btn-primary" ng-click="submitForm()" />
+            <div class="alert alert-danger" ng-if="hasFormError">{{formErrors}}</div>
+        </div>
     </form>
 </div>
 <div class="modal-footer">
-    <div class="col-sm-offset-3 col-sm-9">
+    <!--<div class="col-sm-offset-3 col-sm-9">
         <input type="button" value="Cancel" class="btn btn-default" ng-click="cancelForm()" />
         <input type="submit" value="Submit" class="btn btn-primary" ng-click="submitForm()" />
-    </div>
+    </div>-->
 </div>
